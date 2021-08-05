@@ -1,0 +1,206 @@
+<!-- db-insert.html -->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    body{
+        margin: 12px;
+        
+    }
+      span{
+      padding:8px;
+      color:red;
+      font-size: 12px;
+  }
+  h1{
+      text-align: center;
+  }
+</style>
+    
+</head>
+<body>
+    <script>
+      function validate(){
+          document.getElementById("fmsg").innerHTML="";
+          document.getElementById("lmsg").innerHTML ="";
+          document.getElementById("cmsg").innerHTML ="";
+          document.getElementById("Amsg").innerHTML ="";
+          document.getElementById("jmsg").innerHTML ="";
+          document.getElementById("bmsg").innerHTML = "";
+          document.getElementById("amsg").innerHTML ="";
+            let firstName = document.insertForm.first_name.value;
+          if (firstName == "") {
+            //alert("First name must be filled ");
+           document.getElementById("fmsg").innerHTML = "must fill the first name";
+              return false;
+
+          }
+                 let lastName = document.insertForm.last_name.value;
+          if (lastName == "") {
+              //alert("Last name must be filled ");
+            document.getElementById("lmsg").innerHTML = "must fill the Last name";
+
+              return false;
+
+          }
+                 let city = document.insertForm.city.value;
+          if (city == "") {
+             // alert("City name must be filled ");
+            document.getElementById("cmsg").innerHTML = "must fill the city";
+
+              return false;
+          }
+                    let Age = document.insertForm.Age.value;
+          if (Age == "") {
+             // alert("Age name must be filled ");
+            document.getElementById("Amsg").innerHTML = "must fill the Age";
+
+              return false;
+          }
+                      let Job_title = document.insertForm.Job_title.value;
+          if (Job_title == "") {
+              //alert("Job_title name must be filled ");
+            document.getElementById("jmsg").innerHTML = "must fill the Job Title";
+
+              return false;
+          }
+                      let Business_phone = document.insertForm.Business_phone.value;
+          if (Business_phone == "") {
+              //alert("Business_phone name must be filled ");
+            document.getElementById("bmsg").innerHTML = "must fill the Business phone";
+
+              return false;
+          }
+                      let Address = document.insertForm.Address.value;
+          if (Address == "") {
+              //alert("Address name must be filled ");
+            document.getElementById("amsg").innerHTML = "must fill the Address";
+
+              return false;
+          }
+                       let email = document.insertForm.email.value;
+          if (email == "") {
+              //alert("Address name must be filled ");
+              document.getElementById("emsg").innerHTML = "must fill the email";
+
+              return false;
+          }
+          
+      }
+    </script>
+    <h1> Insert Customer </h1>
+    <!-- <form name="insertForm" action="db-insert.php" onsubmit="return validate()" method="post">
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="first_name" id="frist_name" ><td><span id="fmsg"></span></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="last_name" id="last_name" ><td><span id="lmsg"></span></td>
+            </tr>
+            <tr>
+                <td>City: </td>
+                <td><input type="text" name="city" id="city" ><td><span id="cmsg"></span></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" name="Age" id="Age" ><td><span id="Amsg"></span></td>
+            </tr>
+            <tr>
+                <td>Job_title:</td>
+                <td><input type="text" name="Job_title" id="Job_title" ><td><span id="jmsg"></span></td>
+            </tr>
+            <tr>
+                <td>Business phone:</td>
+                <td><input type="number" name="Business_phone" id="Business_phone" ><td><span id="bmsg"></span></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" name="Address" id="Address" ><td><span id="amsg"></span>
+        
+        </td>
+        </tr> 
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" name="email" id="email">
+            <td><span id="emsg"></span>
+        
+            </td>
+        </tr>
+        </table>
+        <br><br>
+        <input type="submit">
+    </form> -->
+<div class="container">
+    <form  action="db-insert.php" class="was-validated" method="post">
+        <div class="form-group">
+            <label for="first_name">Username:</label>
+            <input type="text" class="form-control" id="first_name" placeholder="Enter first name" name="first_name" required>
+            <div class="valid-feedback">Looks good now!</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="last_name">last name:</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Enter last name" name="last_name" required>
+            <div class="valid-feedback">Looks good now!</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter City" name="city" required>
+            <div class="valid-feedback">Looks good now!</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="Age">Age:</label>
+            <input type="number" class="form-control" id="Age" placeholder="Enter Age" name="Age"required>
+            <div class="valid-feedback">Looks good now!</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="Job_title">Job_title:</label>
+            <input type="text" class="form-control" id="Job_title" placeholder="Enter Job_title" name="Job_title" required>
+            <div class="valid-feedback">Looks good now!</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="Business_phone">Business_phone:</label>
+            <input type="number" class="form-control" id="Business_phone" placeholder="Enter Business_phone" name="Business_phone" required>
+            <div class="valid-feedback">Looks good now!</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="Address">Address:</label>
+            <input type="text" class="form-control" id="Address" placeholder="Enter Address" name="Address" required>
+            <div class="valid-feedback">Looks good now!</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"  required>
+            <div class="valid-feedback">Looks good now!</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+
+</html>
+<!-- <?PHP
+        $htmlData = "<tr>";
+        $htmlData .= "<td>" . $row["id"] . "</td>";
+        $htmlData .= "<td>" . $row["first_name"] . "</td>";
+        $htmlData .= "<td>" . $row["last_name"] . "</td>";
+        $htmlData .= "<td>" . $row["city"] . "</td>";
+        $htmlData .= "<td>" . $row["job_title"] . "</td>";
+        $htmlData .= "<td>" . $row["business_phone"] . "</td>";
+        $htmlData .= "<td>" . $row["age"] . "</td>";
+        $htmlData .= "<td>" . $row["address"] . "</td>";
+        $htmlData .= "</tr>";
+        echo $htmlData;
+        ?> -->
