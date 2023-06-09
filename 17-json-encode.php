@@ -10,6 +10,7 @@
     <?php
     $age = array("Peter" => 35, "Ben" => 37, "Joe" => 43);
     print_r($age);
+    echo $age['Peter'];
     echo "<br>" . json_encode($age);
 
     $cars = array("Volvo", "BMW", "Toyota");

@@ -9,7 +9,7 @@ if (!empty($_POST)) {
     $input = $_POST['input'];
     # checking if the entered number is divisible by any number from 2 to n-1 (n = entered number)
     # obviously it will be divisible by 1 and itself, if it is divisible by any other number then it is not prime number
-    for ($i = 2; $i <= $input - 1; $i++) {
+    for ($i = 2; $i <= $input - 1 ; $i++) {
         if ($input % $i == 0) {
             $value = True;
         }

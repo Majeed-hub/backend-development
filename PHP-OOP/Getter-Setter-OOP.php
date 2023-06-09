@@ -69,7 +69,7 @@
     }
 
     $ProductOne = new Product("Iphone 11", "A product from Apple", 60000);
-    $ProductOne->setPrice(50000);
+    $ProductOne->setPrice("Fifty thousand");
 
     // $ProductOne->setTitle("akdHFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     // $ProductOne->setPrice("twenty thousand");

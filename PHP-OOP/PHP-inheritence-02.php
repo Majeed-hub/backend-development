@@ -40,6 +40,7 @@
     }
     class Fortuner extends SUV
     {
+
         function FortunerDetails()
         {
             $htmlData = "Fortuner : Brand Name is Toyota" . "<br>" . " price is 43 lakhs " . "<br>" . "<br>";
@@ -81,9 +82,9 @@
         }
     }
 
-    $SUV_obj = new Fortuner(2020);
-    echo $SUV_obj->FortunerDetails();
-    echo $SUV_obj->getDetails();
+    $myFortuner = new Fortuner(2020);
+    echo $myFortuner->FortunerDetails();
+    echo $myFortuner->getDetails();
 
 
     $Sedan_obj = new Ciaz(2021);
